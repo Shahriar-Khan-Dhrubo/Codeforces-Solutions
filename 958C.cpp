@@ -21,7 +21,7 @@ typedef map<ll, int> mpli;
 typedef map<ll, ll> mpll;
 
 // global variables
-int i, j, k, n;
+ll i, j, k, n;
 
 // mathematical functions
 int gcd(int a, int b)
@@ -62,7 +62,7 @@ void pe()
 }
 
 // vector printing function
-void vp(std::vector<int> &a)
+void vp(std::vector<ll> &a)
 {
     fo(i, a.size()) cout << a[i] << " ";
     pe();
@@ -74,7 +74,25 @@ void solve()
     int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
     ll N;
     cin >> N;
-    a=log2(N)+1;
+    // a =__builtin_popcountll(N)+1;
+    // if (N == 1)
+    // {
+    //     cout << 1 << endl;
+    //     cout << 1 << endl;
+    //     return;
+    // }
+    vll A;
+    for (i = 63; i >= 0; i--)
+    {
+        if ((N >> i & 1ll) == 1)
+        {
+            if (((1ll << i) ^ N) != 0)
+                A.pb(((1ll << i) ^ N));
+        }
+    }
+    A.pb(N);
+    cout << A.size() << endl;
+    vp(A);
     // string S;
     // vi A(N, 0);
 }
