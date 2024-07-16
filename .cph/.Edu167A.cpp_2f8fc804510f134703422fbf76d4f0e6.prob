@@ -1,0 +1,1 @@
+{"name":"Local: Edu167A","url":"e:\\Programming\\Codeforces\\Edu167A.cpp","tests":[{"id":1719501316687,"input":"5\n24 42\n-2 -1\n-1 -2\n0 -50\n15 0\n","output":"YES\nYES\nNO\nNO\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Programming\\Codeforces\\Edu167A.cpp","group":"local","local":true}

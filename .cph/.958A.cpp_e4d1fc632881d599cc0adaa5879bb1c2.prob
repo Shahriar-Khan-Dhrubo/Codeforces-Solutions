@@ -1,0 +1,1 @@
+{"name":"Local: 958A","url":"e:\\Programming\\Codeforces\\958A.cpp","tests":[{"id":1721055296196,"input":"4\n1 5\n5 2\n6 3\n16 4\n","output":"0\n4\n3\n5\n"},{"id":1721058793649,"input":"1\n10 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Programming\\Codeforces\\958A.cpp","group":"local","local":true}
