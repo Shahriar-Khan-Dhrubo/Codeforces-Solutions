@@ -79,28 +79,27 @@ void solve()
     int len=S.size();
     // vi A(N, 0);
     string S1,S2;
-    vi fre1(26,0),fre2(26,0);
+    vi sfix(N,0),pfix(N,0);
+    set<int> Se;
     fo(i,len)
     {
-        fre1[S[i]-'a']++;
-        if(fre1[S[i]-'a']>1) 
-        {
-            break;
-        }
+        Se.insert(S[i]-'a');
+        sfix[i]=Se.size();
     }
+    Se.clear();
     // cout<<i<<endl;
-    for(;i<len;i++)
+    for(i=len-1;i>=0;i--)
     {
-        fre2[S[i]-'a']++;
+        Se.insert(S[i]-'a');
+        pfix[i]=Se.size();
     }
-    for(i=0;i<26;i++)
+    for(i=0;i<N-1;i++)
     {
-        if(fre1[i]>0) cnt++;
-        if(fre2[i]>0) cnt++;
+        mx=max(mx,sfix[i]+pfix[i+1]);
     }
     // vp(fre1);
     // vp(fre2);
-    cout<<cnt<<endl;
+    cout<<mx<<endl;
 }
 
 // main function
