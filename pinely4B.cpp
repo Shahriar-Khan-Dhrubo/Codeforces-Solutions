@@ -74,16 +74,25 @@ void solve()
     int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
     int N, K;
     cin >> N;
-    // string S;
-    vi A(N-1, 0);
-    fo(i,N) cin>>A[i];
+    vi A(N+1,0);
+    A[0]=A[N]=0;
+    for(i=1;i<N;i++) cin>>A[i];
     vi B(N,0);
-    fo(i,N-1)
+    for(i=1;i<N+1;i++)
     {
-        B[i]|=A[i];
-        B[i+1]|=A[i];
+        B[cnt++]=A[i]|A[i-1];
     }
-    vp(A);
+    // vp(A);
+    // vp(B);
+    for(i=1;i<N;i++)
+    {
+        if(A[i]!=(B[i]&B[i-1]))
+        {
+            cout<<-1<<endl;
+            return;
+        }
+    }
+    vp(B);
 }
 
 // main function
