@@ -1,0 +1,1 @@
+{"name":"Local: 960A","url":"e:\\Programming\\Codeforces\\960A.cpp","tests":[{"id":1723748314866,"input":"5\n2\n2 1\n2\n1 1\n3\n3 3 3\n4\n3 3 4 4\n4\n1 2 2 2\n","output":"YES\nNO\nYES\nNO\nYES\n"},{"id":1723748335784,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Programming\\Codeforces\\960A.cpp","group":"local","local":true}

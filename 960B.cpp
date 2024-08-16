@@ -21,7 +21,7 @@ typedef map<ll, int> mpli;
 typedef map<ll, ll> mpll;
 
 // global variables
-int i,j,k;
+int i, j, k;
 // const int N=1e5+10;
 // int A[N];
 
@@ -73,10 +73,27 @@ void vp(std::vector<int> &a)
 // solve function
 void solve()
 {
-    int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
-    cin >> n;
+    int x, y, z, m, n, o, p, q, r, a, b, c, cnt = -1, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
+    cin >> n >> x >> y;
+    x--, y--;
     // string S;
-    // vi A(n, 0);
+    vi A(n, 0);
+    for (i = y; i <= x; i++)
+    {
+        A[i] = 1;
+    }
+    for (i = y - 1; i >= 0; i--)
+    {
+        A[i] = cnt;
+        cnt = -cnt;
+    }
+    cnt = -1;
+    for (i = x + 1; i < n; i++)
+    {
+        A[i] = cnt;
+        cnt = -cnt;
+    }
+    vp(A);
 }
 
 // main function

@@ -76,7 +76,21 @@ void solve()
     int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
     cin >> n;
     // string S;
-    // vi A(n, 0);
+    vi A(n, 0),fre(51,0);;
+    fo(i,n) 
+    {
+        cin>>A[i];
+        fre[A[i]]++;
+    }
+    for(i=50;i>=1;i--)
+    {
+        if(fre[i]&1)
+        {
+            py();
+            return;
+        } 
+    }
+    pn();
 }
 
 // main function
