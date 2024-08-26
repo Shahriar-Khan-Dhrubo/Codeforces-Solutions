@@ -71,24 +71,29 @@ void vp(std::vector<int> &a)
 }
 
 // solve function
-void solve()
-{
-    int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
-    cin >> n;
-    std::vector<string> S(2);
-    fo(i, 2) cin >> S[i];
-    for (i = 1; i < n - 1; i++)
-    {
-        bool ok = true;
-        ok &= (S[0][i]=='.' && S[1][i]=='.');
-        ok &= (S[0][i-1]!=S[1][i-1]);
-        ok &= (S[0][i+1]!=S[1][i+1]);
-        ok &= (S[0][i-1]==S[0][i+1]);
-        ans+=ok;
+void solve() {
+    ll N, M;
+    cin >> N >> M;
+    vector<int> A(N, 0);
+    for(int i = 0; i < N; i++) cin >> A[i];
+    sort(A.begin(), A.end());
+    
+    ll Ans = 0, Sum = 0;
+    int j = 0;
+    
+    for(int i = 0; i < N; i++) {
+        while(j < N && A[j] - A[i] <= 1 && Sum + A[j] <= M) {
+            Sum += A[j];
+            j++;
+        }
+        Ans = max(Ans, Sum);
+        Sum -= A[i];  // Subtract A[i] as we move the left pointer
     }
-    cout<<ans<<endl;
-    // vi A(n, 0);
+    
+    cout << Ans << endl;
 }
+
+
 
 // main function
 int main()
