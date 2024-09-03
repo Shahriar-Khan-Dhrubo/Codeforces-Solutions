@@ -74,21 +74,28 @@ void vp(std::vector<int> &a)
 void solve()
 {
     int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
-    cin >> x >> y >> k;
+    cin >> n;
     // string S;
     // vi A(n, 0);
-    int moveX=(x+k-1)/k;
-    // cout<<moveX<<" ";
-    int moveY=(y+k-1)/k;
-    // cout<<moveY<<" ";
-    if(moveX>=moveY){
-        mx=max(moveX-1,moveY);
-        cout<<moveX+mx<<endl;
+    std::vector<vector<char>> A(n,std::vector<char> (4));
+    fo(i,n)
+    {
+        fo(j,4)
+        {
+            cin>>A[i][j];
+        }
     }
-    else{
-        mx=max(moveX,moveY);
-        cout<<moveY+mx<<endl;
+    for(i=n-1;i>=0;i--)
+    {
+        for(j=0;j<4;j++)
+        {
+            if(A[i][j]=='#')
+            {
+                cout<<j+1<<" ";
+            }
+        }
     }
+    cout<<endl;
 }
 
 // main function
