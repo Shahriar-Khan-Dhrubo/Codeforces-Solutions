@@ -77,6 +77,10 @@ void solve()
     cin >> n;
     // string S;
     // vi A(n, 0);
+    string S;
+    cin>>S;
+    if(S[0]==S[n-1]) pn();
+    else py();
 }
 
 int main()
