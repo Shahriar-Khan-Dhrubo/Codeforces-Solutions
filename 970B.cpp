@@ -73,10 +73,26 @@ void vp(std::vector<int> &a)
 // solve function
 void solve()
 {
-    int x, y, z, m, n, o, p, q, r, a, b, c, l, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
+    int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
     cin >> n;
-    // string S;
-    // vi A(n, 0);
+    string S;
+    cin>>S;
+    if(sqrt(n)*sqrt(n)!=n){
+        pn();
+        return;
+    }
+    r=sqrt(n);
+    fo(i,n){
+        if(S[i]!='1') break;
+    }
+    if(i==n){
+        if(n==4) py();
+        else pn();
+    }
+    else{
+        if((i-1)*(i-1)==n) py();
+        else pn();
+    }
 }
 
 int main()

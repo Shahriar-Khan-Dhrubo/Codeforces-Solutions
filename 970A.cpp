@@ -73,8 +73,10 @@ void vp(std::vector<int> &a)
 // solve function
 void solve()
 {
-    int x, y, z, m, n, o, p, q, r, a, b, c, l, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
-    cin >> n;
+    int x, y, z, m, n, o, p, q, r, a, b, c, cnt = 0, cnt1 = 0, cnt2 = 0, sum = 0, ans = 0, check = 0, mn = INT_MAX, mx = 0, start, csum1 = 0, csum2 = 0;
+    cin >> a >> b;
+    if((a==0 && b%2!=0) || (a%2!=0 && b==0) || (a%2!=0 && b%2!=0) ||(a%2!=0 && b%2==0)) pn();
+    else py();
     // string S;
     // vi A(n, 0);
 }
